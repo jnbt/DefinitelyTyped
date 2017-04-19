@@ -3453,17 +3453,17 @@ export interface FlatListProperties<ItemT> extends React.Props<FlatListStatic<It
     /**
      * Rendered in between each item, but not at the top or bottom
      */
-    ItemSeparatorComponent?: React.ComponentClass<any> | null
+    ItemSeparatorComponent?: React.ComponentClass<any> | React.StatelessComponent<any> | null
 
     /**
      * Rendered at the bottom of all the items.
      */
-    ListFooterComponent?: React.ComponentClass<any> | null
+    ListFooterComponent?: React.ComponentClass<any> | React.StatelessComponent<any> | null
 
     /**
      * Rendered at the top of all the items.
      */
-    ListHeaderComponent?: React.ComponentClass<any> | null
+    ListHeaderComponent?: React.ComponentClass<any> | React.StatelessComponent<any> | null
 
     /**
      * Optional custom style for multi-item rows generated when numColumns > 1

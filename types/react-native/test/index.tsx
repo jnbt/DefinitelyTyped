@@ -193,11 +193,24 @@ InteractionManager.runAfterInteractions(() => {
     // ...
 }).then(() => 'done')
 
+
+class FlatListHeader extends React.Component<{}, {}> {
+    render() {
+        return <View />;
+    }
+}
+
+const FlatListFooter = () => {
+    return <View />;
+}
+
 export class FlatListTest {
     render() {
         <FlatList
             data={[1, 2, 3, 4, 5]}
             renderItem={(itemInfo: number) => <View><Text>{itemInfo}</Text></View>}
+            ListHeaderComponent={FlatListHeader}
+            ListFooterComponent={FlatListFooter}
         />
     }
 }
